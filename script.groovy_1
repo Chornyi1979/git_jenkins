@@ -24,7 +24,7 @@ def buildImage() {
 
 def deployApp() {
 	echo 'deploying the application...'
-	mvn deploy:deploy-file -Dpackaging="jar" -DgroupId="homework_part3" -DartifactId="myFirstApp" -Dversion="jarFileVersion" 
+	sh 'mvn deploy:deploy-file -Dpackaging="jar" -DgroupId="homework_part3" -DartifactId="myFirstApp" -Dversion="jarFileVersion"' 
 }
 
 def commitVersionUpdate() {
