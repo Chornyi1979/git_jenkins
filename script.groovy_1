@@ -24,6 +24,7 @@ def buildImage() {
 
 def deployApp() {
 	echo 'deploying the application...'
+	mvn package azure-webapp:deploy
 	
 }
 
