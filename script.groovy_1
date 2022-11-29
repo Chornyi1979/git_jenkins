@@ -24,7 +24,7 @@ def buildImage() {
 
 def deployApp() {
 	echo 'deploying the application...'
-	mvn package com.microsoft.azure:azure-webapp-maven-plugin:1.12.0:deploy
+	sh 'mvn package com.microsoft.azure:azure-webapp-maven-plugin:1.12.0:deploy'
 	
 }
 
