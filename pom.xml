@@ -77,8 +77,8 @@
                 <region>eastus</region>  
                 <runtime>
                   <os>linux</os>  
-                  <javaVersion>jdk11</javaVersion>  
-                  <webContainer>jdk11</webContainer>
+                  <javaVersion>jre8</javaVersion>  
+                  <webContainer>jre8</webContainer>
                 </runtime>  
                 <deployment>
                   <resources>
