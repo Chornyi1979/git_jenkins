@@ -67,9 +67,9 @@
       <plugin>
           <groupId>com.microsoft.azure</groupId>  
               <artifactId>azure-webapp-maven-plugin</artifactId>  
-              <version>1.12.0</version>  
+              <version>2.2.0</version>  
               <configuration>
-                <schemaVersion>V2</schemaVersion>  
+                <schemaVersion>v2</schemaVersion>  
                 <subscriptionId>6c57c00d-ac27-409b-9fc2-dd266529f436</subscriptionId>  
                 <resourceGroup>my-group-261179-rg</resourceGroup>  
                 <appName>my-webapp-261179</appName>  
@@ -77,8 +77,8 @@
                 <region>eastus</region>  
                 <runtime>
                   <os>linux</os>  
-                  <javaVersion>jre8</javaVersion>  
-                  <webContainer>jre8</webContainer>
+                  <javaVersion>Java 8</javaVersion>  
+                  <webContainer>Java 8</webContainer>
                 </runtime>  
                 <deployment>
                   <resources>
