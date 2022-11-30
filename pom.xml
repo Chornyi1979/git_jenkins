@@ -74,7 +74,10 @@
                 <resourceGroup>my-group-261179-rg</resourceGroup>  
                 <appName>my-webapp-261179</appName>  
                 <pricingTier>F1</pricingTier>  
-                <region>eastus</region>  
+                <region>eastus</region>
+                <authentication>
+                  <serverId>azure-auth</serverId>
+                </authentication>
                 <runtime>
                   <os>linux</os>  
                   <javaVersion>Java 11</javaVersion>  
