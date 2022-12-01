@@ -76,7 +76,7 @@
                 <pricingTier>F1</pricingTier>  
                 <region>eastus</region>
                 <authentication>
-		  <file>/var/jenkins_home/workspace/my-pipeline/src/main/java/com/mycompany/app/auth.json</file>
+		  <serverId>azure-auth</serverId>
                 </authentication>
                 <runtime>
                   <os>linux</os>  
