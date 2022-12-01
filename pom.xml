@@ -68,7 +68,13 @@
           <groupId>com.microsoft.azure</groupId>  
               <artifactId>azure-webapp-maven-plugin</artifactId>  
               <version>2.2.0</version>  
-              <configuration>
+	      <configuration>
+		<auth>
+        	  <client>803250fd-31a3-4d06-a481-263973ed3e77</client>
+		  <tenant>7ab2df67-08b0-4840-940d-4cb97ddd5843</tenant>
+        	  <key>r9a8Q~ZTnK-nqMpA68uZeDiLnuY9DVljeX3imbP.</key>
+        	  <environment>azure</environment>
+    		</auth>
                 <schemaVersion>v2</schemaVersion>  
                 <subscriptionId>6c57c00d-ac27-409b-9fc2-dd266529f436</subscriptionId>  
                 <resourceGroup>my-group-261179-rg</resourceGroup>  
