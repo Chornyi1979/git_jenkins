@@ -88,7 +88,21 @@
                   <os>linux</os>  
                   <javaVersion>Java 11</javaVersion>  
                   <webContainer>Java 11</webContainer>
-                </runtime>  
+	        </runtime>
+      	        <appSettings>
+                  <property>
+                    <name>PORT</name>
+                    <value>80</value>
+                  </property>
+                  <property>
+                    <name>WEBSITES_PORT</name>
+                    <value>80</value>
+                  </property>
+                  <property>
+                    <name>WEBSITES_CONTAINER_START_TIME_LIMIT</name>
+                    <value>600</value>
+                  </property>
+                </appSettings>		
                 <deployment>
                   <resources>
                     <resource>
