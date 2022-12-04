@@ -43,3 +43,9 @@ resource "azurerm_app_service" "rm" {
   resource_group_name = azurerm_resource_group.rm.name
   app_service_plan_id = azurerm_app_service_plan.rm.id
 }
+resource "azurerm_virtual_network" "example" {
+  name                = "example-network"
+  resource_group_name = azurerm_resource_group.example.name
+  location            = azurerm_resource_group.example.location
+  address_space       = ["10.0.0.0/16"]
+}

@@ -22,10 +22,10 @@ def buildImage() {
 	}
 }
 def runTerraform() {
-	dir('terraform') {
-		sh "terraform init"
-		sh "terraform apply --auto-approve"
-	}
+    dir('terraform') {
+	sh "terraform init"
+	sh "terraform apply --auto-approve"
+    }
 }
 def deployApp() {
 	echo 'deploying the application...'
