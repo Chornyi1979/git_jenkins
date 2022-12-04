@@ -7,8 +7,7 @@ terraform {
     container_name       = "tfstate-maven"
     key                  = "terraform.tfstate-maven"
 
-    features{
-    }
+   
   }
 }
 
