@@ -1,5 +1,5 @@
 terraform {
-  required_version = ">= 0.11"
+  required_version = ">=3.0.0"
   
   backend "azurerm" {
     resource_group_name = "my-group-261179-rg"
@@ -32,14 +32,6 @@ resource "azurerm_app_service_plan" "rm" {
     size = "F1"
   }
 }
-
-resource "azurerm_app_service" "rm" {
-  name                = "alex-webapp-terraform"
-  location            = azurerm_resource_group.rm.location
-  resource_group_name = azurerm_resource_group.rm.name
-  app_service_plan_id = azurerm_app_service_plan.rm.id
-}
-
 resource "azurerm_app_service" "rm" {
   name                = "alex-webapp-terraform"
   location            = azurerm_resource_group.rm.location
