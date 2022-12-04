@@ -1,5 +1,5 @@
 terraform {
-  required_version = ">=3.0"
+  required_version = ">=1.3.0"
   backend "azurerm" {
     storage_account_name = "ch2611"
     container_name       = "tfstate-maven"
