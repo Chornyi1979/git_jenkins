@@ -1,25 +1,22 @@
 terraform {
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = ">=3.0.0"
-      backend "azurerm" {
-        storage_account_name = "ch2611"
-        container_name       = "tfstate-maven"
-        key                  = "prod.terraform.tfstate"
-        subscription_id      = "6c57c00d-ac27-409b-9fc2-dd266529f436"
-        tenant_id            = "7ab2df67-08b0-4840-940d-4cb97ddd5843"
-      }
+  required_version = ">= 0.11"
+  
+  backend "azurerm" {
+    resource_group_name = "my-group-261179-rg"
+    storage_account_name = "ch2611"
+    container_name       = "tfstate-maven"
+    key                  = "terraform.tfstate-maven"
+
+    features{
     }
   }
 }
 
-# Configure the Microsoft Azure Provider
 provider "azurerm" {
-  features {}
-
-  use_msi = true
+  features {
+  }
 }
+
 resource "azurerm_resource_group" "rm" {
   name     = "my-group-261179-rg"
   location = "East US"
@@ -34,6 +31,13 @@ resource "azurerm_app_service_plan" "rm" {
     tier = "Free"
     size = "F1"
   }
+}
+
+resource "azurerm_app_service" "rm" {
+  name                = "alex-webapp-terraform"
+  location            = azurerm_resource_group.rm.location
+  resource_group_name = azurerm_resource_group.rm.name
+  app_service_plan_id = azurerm_app_service_plan.rm.id
 }
 
 resource "azurerm_app_service" "rm" {
