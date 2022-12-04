@@ -1,22 +1,26 @@
 terraform {
-  required_version = ">=1.3.0"
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=3.0.0"
+    }
+  }
+}
+
+# Configure the Microsoft Azure Provider
+provider "azurerm" {
+  features {}
+
+  use_msi = true
+
   backend "azurerm" {
     storage_account_name = "ch2611"
     container_name       = "tfstate-maven"
     key                  = "prod.terraform.tfstate"
     subscription_id      = "6c57c00d-ac27-409b-9fc2-dd266529f436"
     tenant_id            = "7ab2df67-08b0-4840-940d-4cb97ddd5843"
-    
   }
 }
-  
-
-# Configure the Microsoft Azure Provider
-provider "azurerm" {
-  features {}
-
- 
-
 }
 resource "azurerm_resource_group" "rm" {
   name     = "my-group-261179-rg"
