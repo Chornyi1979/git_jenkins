@@ -7,7 +7,11 @@ terraform {
   }
 }
 
-  
+# Configure the Microsoft Azure Provider
+provider "azurerm" {
+  features {}
+
+  use_msi = true 
   backend "azurerm" {
     resource_group_name = "my-group-261179-rg"
     storage_account_name = "ch2611"
@@ -15,10 +19,6 @@ terraform {
     key                  = "terraform.tfstate-maven"
     subscription_id      = "6c57c00d-ac27-409b-9fc2-dd266529f436"
     tenant_id            = "7ab2df67-08b0-4840-940d-4cb97ddd5843"
-  }
-
-provider "azurerm" {
-  features {
   }
 }
 
