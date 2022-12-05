@@ -23,7 +23,7 @@ def buildImage() {
 }
 def runTerraform() {
 	echo "terraform"
-    withCredentials([azureServicePrincipal('credentials_id')]) {
+    withCredentials([azureServicePrincipal('6c57c00d-ac27-409b-9fc2-dd266529f436')]) {
     dir('terraform')
 	sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID'
 	sh "terraform init"
