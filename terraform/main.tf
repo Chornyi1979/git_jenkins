@@ -1,5 +1,12 @@
 terraform {
-  required_version = ">=1.3.0"
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=3.0.0"
+    }
+  }
+}
+
   
   backend "azurerm" {
     resource_group_name = "my-group-261179-rg"
@@ -8,10 +15,7 @@ terraform {
     key                  = "terraform.tfstate-maven"
     subscription_id      = "6c57c00d-ac27-409b-9fc2-dd266529f436"
     tenant_id            = "7ab2df67-08b0-4840-940d-4cb97ddd5843"
-
-   
   }
-}
 
 provider "azurerm" {
   features {
