@@ -25,7 +25,7 @@ def runTerraform() {
 	withCredentials([azureServicePrincipal('6ddbbf66-c4cf-490c-bef7-c3b1b932415d')]) {
 	dir('terraform') {
 	  sh "terraform init"
-	  sh "terraform apply --avto-approve"
+	  sh "terraform apply --auto-approve"
 	  }
        }
 }
