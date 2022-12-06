@@ -23,16 +23,23 @@ def buildImage() {
 }
 def runTerraform() {
 	environment {
-   	  MY_CRED = credentials('6c57c00d-ac27-409b-9fc2-dd266529f436')
+        TF_HOME = tool('terraform')
+        TF_IN_AUTOMATION = "true"
+        PATH = "$TF_HOME:$PATH"
         }
-        dir('terraform') {
-	  sh 'az login --service-principal -u $MY_CRED_CLIENT_ID -p $MY_CRED_CLIENT_SECRET -t $MY_CRED_TENANT_ID'
-	  sh "terraform init"
-	  sh "terraform plan"
-	  sh "terraform apply --auto-approve"
-        }
+        dir ('terraform') {
+            sh 'terraform Init' {
+                    withCredentials([azureServicePrincipal(
+                    credentialsId: 'Jenkins',
+                    subscriptionIdVariable: 'ARM_SUBSCRIPTION_ID',
+                    clientIdVariable: 'ARM_CLIENT_ID',
+                    clientSecretVariable: 'ARM_CLIENT_SECRET',
+                    tenantIdVariable: 'ARM_TENANT_ID']) 
     
-}
+                    }
+         }
+ }
+
 def deployApp() {
 	echo 'deploying the application...'
 	sh 'mvn package com.microsoft.azure:azure-webapp-maven-plugin:2.2.0:deploy'
