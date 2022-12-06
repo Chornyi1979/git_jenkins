@@ -35,7 +35,13 @@ pipeline {
                 }
             }
         }
-		
+	stage ("infrastructure") {
+            steps {
+                script {
+                    gv.runTerraform()
+                }
+            }
+        }	
         stage ("deploy") {
             steps {
                 script {
