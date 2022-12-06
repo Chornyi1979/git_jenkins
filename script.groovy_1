@@ -21,24 +21,6 @@ def buildImage() {
         sh "docker push chornyi1979/my-repo:${IMAGE_NAME}"
 	}
 }
-def runTerraform() {
-	environment {
-        TF_HOME = tool('terraform')
-        TF_IN_AUTOMATION = "true"
-        PATH = "$TF_HOME:$PATH"
-        }
-        dir ('terraform') {
-            sh 'terraform Init' {
-                    withCredentials([azureServicePrincipal(
-                    credentialsId: 'Jenkins',
-                    subscriptionIdVariable: 'ARM_SUBSCRIPTION_ID',
-                    clientIdVariable: 'ARM_CLIENT_ID',
-                    clientSecretVariable: 'ARM_CLIENT_SECRET',
-                    tenantIdVariable: 'ARM_TENANT_ID']) 
-    
-                    }
-         }
- }
 
 def deployApp() {
 	echo 'deploying the application...'
