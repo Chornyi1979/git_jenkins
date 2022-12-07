@@ -78,7 +78,7 @@
                 <schemaVersion>v2</schemaVersion>  
                 <subscriptionId>6c57c00d-ac27-409b-9fc2-dd266529f436</subscriptionId>  
                 <resourceGroup>my-group-261179-rg</resourceGroup>  
-                <appName>my-webapp-261179</appName>  
+                <appName>alex-maven-terraform</appName>  
                 <pricingTier>F1</pricingTier>  
                 <region>eastus</region>
                 <authentication>
