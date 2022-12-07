@@ -13,7 +13,7 @@ provider "azurerm" {
   features {}
   
   subscription_id   = "$AZURE_SUBSCRIPTION_ID"
-  tenant_id         = "$AZURE_TENANT_ID"
+  tenant_id         = 7ab2df67-08b0-4840-940d-4cb97ddd5843
   client_id         = "$AZURE_CLIENT_ID"
   client_secret     = "$AZURE_CLIENT_SECRET"
 }
