@@ -5,12 +5,6 @@ terraform {
       version = "=3.0.0"
     }
   }
-  backend "azurerm" {
-        resource_group_name  = "homework_part2"
-        storage_account_name = "ch2611"
-        container_name       = "tfstate-maven"
-        key                  = "terraform.tfstate-maven"
-    }
 }
 
 
