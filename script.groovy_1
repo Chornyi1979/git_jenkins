@@ -22,7 +22,7 @@ def buildImage() {
 	}
 }
 def runTerraform() {
-	withCredentials([azureServicePrincipal('6ddbbf66-c4cf-490c-bef7-c3b1b932415d')]) {
+	withCredentials([azureServicePrincipal('5338d449-b424-4cd8-98ea-3ca9b7858060')]) {
 	dir('terraform') {
 	  sh "terraform init"
 	  sh "terraform apply --auto-approve"
