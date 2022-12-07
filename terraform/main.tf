@@ -9,7 +9,7 @@ terraform {
         resource_group_name  = "homework_part2"
         storage_account_name = "ch2611"
         container_name       = "tfstate-maven"
-        key                  = "terraform.tfstate-maven"
+        key                  = "tf/terraform.tfstate-web"
         use_msi              = true
         subscription_id      = "6c57c00d-ac27-409b-9fc2-dd266529f436"
         tenant_id            = "7ab2df67-08b0-4840-940d-4cb97ddd5843"
