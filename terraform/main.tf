@@ -23,10 +23,11 @@ resource "azurerm_resource_group" "rm" {
   location = "East US"
 }
 
-resource "azurerm_app_service_plan" "rm" {
+resource "azurerm_service_plan" "rm" {
   name                = "alex-maven-terraform-plan"
   location            = azurerm_resource_group.rm.location
   resource_group_name = azurerm_resource_group.rm.name
+  os_type             = "Linux"
 
   sku {
     tier = "Free"
@@ -37,7 +38,7 @@ resource "azurerm_app_service" "rm" {
   name                = "alex-maven-terraform"
   location            = azurerm_resource_group.rm.location
   resource_group_name = azurerm_resource_group.rm.name
-  app_service_plan_id = azurerm_app_service_plan.rm.id
+  app_service_plan_id = azurerm_service_plan.rm.id
 }
 resource "azurerm_virtual_network" "rm" {
   name                = "network-terraform"
