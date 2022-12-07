@@ -5,7 +5,14 @@ terraform {
       version = "=3.0.0"
     }
   }
+  backend "azurerm" {
+        resource_group_name  = "homework_part2"
+        storage_account_name = "ch2611"
+        container_name       = "tfstate-maven"
+        key                  = "terraform.tfstate-maven"
+    }
 }
+
 
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
@@ -17,8 +24,8 @@ resource "azurerm_resource_group" "rm" {
   location = "East US"
 }
 
-resource "azurerm_app_service_plan" "rm" {
-  name                = "alex-webapp-terraform-plan"
+resource "azurerm_service_plan" "rm" {
+  name                = "alex-maven-terraform-plan"
   location            = azurerm_resource_group.rm.location
   resource_group_name = azurerm_resource_group.rm.name
 
@@ -28,14 +35,14 @@ resource "azurerm_app_service_plan" "rm" {
   }
 }
 resource "azurerm_app_service" "rm" {
-  name                = "alex-webapp-terraform"
+  name                = "alex-maven-terraform"
   location            = azurerm_resource_group.rm.location
   resource_group_name = azurerm_resource_group.rm.name
   app_service_plan_id = azurerm_app_service_plan.rm.id
 }
-resource "azurerm_virtual_network" "example" {
-  name                = "example-network"
-  resource_group_name = azurerm_resource_group.example.name
-  location            = azurerm_resource_group.example.location
+resource "azurerm_virtual_network" "rm" {
+  name                = "network-terraform"
+  resource_group_name = azurerm_resource_group.rm.name
+  location            = azurerm_resource_group.rm.location
   address_space       = ["10.0.0.0/16"]
 }
