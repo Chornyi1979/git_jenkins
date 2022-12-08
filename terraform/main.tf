@@ -5,7 +5,15 @@ terraform {
       version = "=3.0.0"
     }
   }
-    
+    backend "azurerm" {
+        resource_group_name  = "tfstate-maven"
+        storage_account_name = "ch261179"
+        container_name       = "tfstate"
+        key                  = "prod.tfstate.terraform"
+
+        access_key           = "A27nITkJWj2kTIhdweo0gIxTEP/l5pFnpwOor9d/3KtApgJWpm0uM3XyAI3c0IJqWOYuHVncZEAG+AStb0pPXQ=="
+    }
+} 
 
 
 # Configure the Microsoft Azure Provider
