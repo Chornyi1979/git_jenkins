@@ -24,7 +24,7 @@ def buildImage() {
 def runTerraform() {
 	withCredentials([azureServicePrincipal('5338d449-b424-4cd8-98ea-3ca9b7858060')]) {
 	dir('terraform') {
-	  
+	  sh "terraform init"
 	  sh "terraform destroy --auto-approve"
 	  }
        }
