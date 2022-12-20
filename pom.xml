@@ -88,7 +88,7 @@
                 <runtime>
                   <os>linux</os>  
                   <javaVersion>jre8</javaVersion>  
-                  <webContainer>jre8</webContainer>
+                  <webContainer>Java SE</webContainer>
 	        </runtime>
       	        <appSettings>
                   <property>
