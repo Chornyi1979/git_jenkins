@@ -87,7 +87,7 @@
                 </authentication>
                 <runtime>
                   <os>linux</os>  
-                  <javaVersion>jre8</javaVersion>  
+                  <javaVersion>Java 11</javaVersion>  
                   <webContainer>Java SE</webContainer>
 	        </runtime>
       	        <appSettings>
@@ -99,6 +99,7 @@
                 <deployment>
                   <resources>
                     <resource>
+		      <type>jar</type>
                       <directory>${project.basedir}/target</directory>  
                       <includes>
                         <include>*.jar</include>
