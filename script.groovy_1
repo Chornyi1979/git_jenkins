@@ -31,7 +31,7 @@ def runTerraform() {
 }
 def deployApp() {
 	echo 'deploying the application...'
-	sh 'mvn package com.microsoft.azure:azure-webapp-maven-plugin:2.2.0:deploy'
+	sh 'mvn package azure-webapp:deploy'
 	
 }
 
