@@ -32,9 +32,9 @@ def runTerraform() {
 def deployApp() {
 	echo 'deploying the application...'
 	sh 'mvn package azure-webapp:deploy'
-        azureWebAppPublish azureCredentialsId: '([azureServicePrincipal('5338d449-b424-4cd8-98ea-3ca9b7858060')])',
+        azureWebAppPublish azureCredentialsId:[azureServicePrincipal('5338d449-b424-4cd8-98ea-3ca9b7858060')],
                    resourceGroup: 'my-group-261179-rg', appName: 'alex-maven-terraform',
-                   filePath: '*.jar', sourceDirectory: 'target', targetDirectory: 'webapps'	
+                   filePath: '*.jar', sourceDirectory: 'target'
 }
 
 def commitVersionUpdate() {
