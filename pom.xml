@@ -96,17 +96,7 @@
               <value>-Dserver.port=80 -Djava.net.preferIPv4Stack=true</value>
             </property>
           </appSettings>
-          <deployment>
-            <resources>
-              <resource>
-                <type>jar</type>
-                <directory></directory>  
-                <includes>
-                  <include>*.jar</include>
-                </includes>
-              </resource>
-            </resources>
-          </deployment>
+          
         </configuration>
       </plugin>
     </plugins>
