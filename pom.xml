@@ -88,8 +88,7 @@
           <runtime>
             <os>linux</os>  
             <javaVersion>Java 11</javaVersion>
-            <deploymentType>ftp</deploymentType>
-            <stopAppDuringDeployment>true</stopAppDuringDeployment>
+            
             <resources>
               <resource>
                 <directory>${project.basedir}/target</directory>
@@ -98,13 +97,7 @@
                   <include>*.jar</include>
                 </includes>
               </resource>
-              <resource>
-                <directory>${project.basedir}</directory>
-                <targetPath>/</targetPath>
-                <includes>
-                  <include>web.config</include>
-                </includes>
-              </resource>
+              
             </resources>
             
 	  </runtime>
