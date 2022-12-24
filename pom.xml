@@ -100,7 +100,7 @@
             <resources>
               <resource>
                 <type>jar</type>
-                <directory>${project.basedir}/target</directory>  
+                <directory></directory>  
                 <includes>
                   <include>*.jar</include>
                 </includes>
