@@ -88,18 +88,6 @@
           <runtime>
             <os>linux</os>  
             <javaVersion>Java 11</javaVersion>
-            
-            <deployment>
-              <resource>
-                <directory>${project.basedir}/target</directory>
-                <targetPath>/</targetPath>
-                <includes>
-                  <include>*.jar</include>
-                </includes>
-              </resource>
-              
-            </deployment>
-            
 	  </runtime>
       	  <appSettings>
             <property>
@@ -107,7 +95,16 @@
               <value>-Dserver.port=80 -Djava.net.preferIPv4Stack=true</value>
             </property>
           </appSettings>
-          
+          <deployment>
+            <resource>
+              <directory>${project.basedir}/target</directory>
+              <targetPath>/</targetPath>
+              <includes>
+                <include>*.jar</include>
+              </includes>
+            </resource>
+              
+          </deployment>
         </configuration>
       </plugin>
     </plugins>
