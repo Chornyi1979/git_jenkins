@@ -47,7 +47,7 @@ resource "azurerm_app_service" "rm" {
   location            = azurerm_resource_group.rm.location
   resource_group_name = azurerm_resource_group.rm.name
   app_service_plan_id = azurerm_app_service_plan.rm.id
-  os_type             = "Linux"
+  
 }
 resource "azurerm_virtual_network" "rm" {
   name                = "network-terraform"
