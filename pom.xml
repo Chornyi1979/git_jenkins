@@ -88,7 +88,7 @@
           <runtime>
             <os>linux</os>  
             <javaVersion>Java 11</javaVersion>  
-            <webContainer>Java SE</webContainer>
+            <webContainer>Tomcat</webContainer>
 	  </runtime>
       	  <appSettings>
             <property>
