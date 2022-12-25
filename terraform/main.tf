@@ -36,13 +36,12 @@ resource "azurerm_app_service_plan" "rm" {
   location            = azurerm_resource_group.rm.location
   resource_group_name = azurerm_resource_group.rm.name
   os_type             = "Linux"
-  sku_name            = "P1v2"
  
 
-  #sku {
-   # tier = "Free"
-    #size = "F1"
-  #}
+  sku {
+    tier = "Free"
+    size = "F1"
+  }
 
 }
 resource "azurerm_app_service" "rm" {
