@@ -36,22 +36,19 @@ resource "azurerm_service_plan" "rm" {
   location            = azurerm_resource_group.rm.location
   resource_group_name = azurerm_resource_group.rm.name
   os_type             = "Linux"
-  sku_name            = "P1v2"
-
-  #sku {
-   # tier = "Free"
-    #size = "F1"
-  #}
-   
+  sku_name            = "F1"
 
 }
+
 resource "azurerm_linux_web_app" "rm" {
   name                = "alex-maven-terraform"
   location            = azurerm_resource_group.rm.location
   resource_group_name = azurerm_resource_group.rm.name
   service_plan_id     = azurerm_service_plan.rm.id
   
-  site_config {}
+  site_config {
+    linux_fx_version          = "JAVA|11-java11"
+  }
   
 }
 resource "azurerm_virtual_network" "rm" {
