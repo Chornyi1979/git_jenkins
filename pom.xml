@@ -77,8 +77,8 @@
     	  </auth>
           <schemaVersion>v2</schemaVersion>  
           <subscriptionId>6c57c00d-ac27-409b-9fc2-dd266529f436</subscriptionId>  
-          <resourceGroup>my-group-261179-rg-mavplagin</resourceGroup>
-	  <appName>alex-maven</appName>  
+          <resourceGroup>my-group-261179-rg</resourceGroup>
+	  <appName>alex-maven-terraform</appName>  
           <pricingTier>P1v2</pricingTier>  
           <region>eastus</region>	
     
