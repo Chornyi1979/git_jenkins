@@ -35,11 +35,13 @@ resource "azurerm_service_plan" "rm" {
   name                = "alex-maven-terraform-plan"
   location            = azurerm_resource_group.rm.location
   resource_group_name = azurerm_resource_group.rm.name
+  os_type             = "Linux"
+  sku_name            = "P1v2"
 
-  sku {
-    tier = "Free"
-    size = "F1"
-  }
+  #sku {
+   # tier = "Free"
+    #size = "F1"
+  #}
    
 
 }
