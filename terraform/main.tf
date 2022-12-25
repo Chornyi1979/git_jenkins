@@ -49,6 +49,10 @@ resource "azurerm_app_service" "rm" {
   resource_group_name = azurerm_resource_group.rm.name
   app_service_plan_id = azurerm_app_service_plan.rm.id
   
+  site_config {
+       linux_fx_version = "JAVA|11"    
+  }
+  
 }
 resource "azurerm_virtual_network" "rm" {
   name                = "network-terraform"
