@@ -53,7 +53,7 @@ resource "azurerm_linux_web_app" "rm" {
   
   site_config {
        linux_fx_version = "JAVA|11"
-       use_32_bit_worker_process = true
+       
   }
   
 }
@@ -64,7 +64,7 @@ resource "azurerm_virtual_network" "rm" {
   address_space       = ["10.0.0.0/16"]
 }
 #  Deploy code from a public GitHub repo
-resource "azurerm_linux_web_app_source_control" "sourcecontrol" {
+resource "azurerm_app_service_source_control" "sourcecontrol" {
   app_id             = azurerm_linux_web_app.rm.id
   repo_url           = "https://github.com/Chornyi1979/git_jenkins.git"
   branch             = "main"
