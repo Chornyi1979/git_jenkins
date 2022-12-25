@@ -36,7 +36,7 @@ resource "azurerm_service_plan" "rm" {
   location            = azurerm_resource_group.rm.location
   resource_group_name = azurerm_resource_group.rm.name
   os_type             = "Linux"
-  sku_name            = "F1"
+  sku_name            = "P1v2"
 
 }
 
