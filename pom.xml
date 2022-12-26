@@ -90,6 +90,7 @@
       	  <deployment>
             <resources>
               <resource>
+		<type>jar</type>
                 <directory>${project.basedir}/target</directory>
                 <includes>
                   <include>*.jar</include>
