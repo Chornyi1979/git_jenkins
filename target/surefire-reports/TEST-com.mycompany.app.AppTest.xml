@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="com.mycompany.app.AppTest" time="0.004" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="com.mycompany.app.AppTest" time="0.006" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.16.1+1"/>
     <property name="sun.boot.library.path" value="/opt/java/openjdk/lib"/>
-    <property name="maven.multiModuleProjectDirectory" value="/var/jenkins_home/workspace/my-pipeline@2"/>
+    <property name="maven.multiModuleProjectDirectory" value="/var/jenkins_home/workspace/my-pipeline"/>
     <property name="java.vm.vendor" value="Eclipse Adoptium"/>
     <property name="java.vendor.url" value="https://adoptium.net/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -13,7 +13,7 @@
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/var/jenkins_home/workspace/my-pipeline@2"/>
+    <property name="user.dir" value="/var/jenkins_home/workspace/my-pipeline"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="java.runtime.version" value="11.0.16.1+1"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
@@ -59,6 +59,6 @@
     <property name="java.vendor.version" value="Temurin-11.0.16.1+1"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.mycompany.app.AppTest" name="testAppMain" time="0.004"/>
-  <testcase classname="com.mycompany.app.AppTest" name="testAppConstructor" time="0"/>
+  <testcase classname="com.mycompany.app.AppTest" name="testAppMain" time="0.005"/>
+  <testcase classname="com.mycompany.app.AppTest" name="testAppConstructor" time="0.001"/>
 </testsuite>
