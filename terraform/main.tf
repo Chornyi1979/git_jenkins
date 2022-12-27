@@ -48,11 +48,6 @@ resource "azurerm_linux_web_app" "rm" {
   
   site_config {}
   
-  app_settings {
-    "java_server": "JAVA",
-    "java_server_version": 11,
-    "java_version": "java11"
-  }
   
 }
 
