@@ -46,11 +46,7 @@ resource "azurerm_linux_web_app" "rm" {
   resource_group_name = azurerm_resource_group.rm.name
   service_plan_id     = azurerm_service_plan.rm.id
   
-  site_config {
-    "java_server": "JAVA",
-    "java_server_version": 11,
-    "java_version": "java11"
-  }
+  site_config {}
   
 }
 
