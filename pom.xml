@@ -90,7 +90,7 @@
 	  <appSettings>
 	    <property>
 	      <name>JAVA_OPTS</name>
-	      <value>-D server.port=80</value>
+	      <value>-D server.port=8080</value>
 	    </property>
 	  </appSettings>	
       	  <!-- Deployment settings -->
