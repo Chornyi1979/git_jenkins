@@ -50,6 +50,8 @@ resource "azurerm_linux_web_app" "rm" {
     
     application_stack {
       java_server = "JAVA"
+      java_server_version = 11
+      java_version = "java11"
     }
   }
   
