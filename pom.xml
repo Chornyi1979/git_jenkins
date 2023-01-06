@@ -98,10 +98,7 @@
               </resource>
             </resources>
           </deployment>
-               
-          <!-- This is to make sure the jar file can be released at the server side -->
-          <stopAppDuringDeployment>true</stopAppDuringDeployment>
-
+        
         </configuration>
       </plugin>
     </plugins>
