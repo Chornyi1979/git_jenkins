@@ -92,7 +92,7 @@
           <deployment>
             <resources>
               <resource>
-                <directory>${project.basedir}/deliver.sh</directory>
+                <directory>${project.basedir}/scripts</directory>
                 <includes>
                   <include>*.jar</include>
                 </includes>
