@@ -32,7 +32,7 @@ def runTerraform() {
 def deployApp() {
 	echo 'deploying the application...'
 	sh "mvn package azure-webapp:deploy"
-	sh 'deliver.sh'
+	sh '/var/jenkins_home/workspace/my-pipeline/deliver.sh'
 	
         
 }
