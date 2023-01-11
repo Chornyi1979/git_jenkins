@@ -92,7 +92,8 @@
           <deployment>
             <resources>
               <resource>
-                <directory>${project.basedir}/scripts</directory>
+                <directory>${project.basedir}/target</directory>
+		<directory>${project.basedir}/scripts</directory>
                 <includes>
                   <include>*.jar</include>
                 </includes>
