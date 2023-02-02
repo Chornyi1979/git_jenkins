@@ -19,7 +19,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-       
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
 
         <azure.functions.maven.plugin.version>1.22.0</azure.functions.maven.plugin.version>
         <azure.functions.java.library.version>3.0.0</azure.functions.java.library.version>
@@ -149,7 +150,7 @@
 
                     <runtime>
                         <os>linux</os>
-                        <javaVersion>17</javaVersion>
+                        <javaVersion>Java 8</javaVersion>
                     </runtime>
 		    <!-- Deployment settings -->
                     <deployment>
