@@ -21,7 +21,11 @@
     </properties>
 
     <dependencies>
-        
+         <dependency>
+            <groupId>com.microsoft.azure.functions</groupId>
+            <artifactId>azure-functions-java-library</artifactId>
+            <version>${azure.functions.java.library.version}</version>
+         </dependency>       
         
         <dependency>
             <groupId>org.junit.jupiter</groupId>
