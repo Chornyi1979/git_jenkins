@@ -149,7 +149,7 @@
 
                     <runtime>
                         <os>linux</os>
-                        <javaVersion>Java 8</javaVersion>
+                        <javaVersion>17</javaVersion>
                     </runtime>
 		    <!-- Deployment settings -->
                     <deployment>
