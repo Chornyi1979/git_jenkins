@@ -1,6 +1,6 @@
 .DS_Store
-
-!target/my-app-*
+target/
+!target/**/hello-*
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
