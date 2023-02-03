@@ -1,5 +1,5 @@
 .DS_Store
-target/
+target/azure-functions/my-spring-function/lib/*
 !target/*/*/hello-*
 pom.xml.tag
 pom.xml.releaseBackup
