@@ -5,7 +5,7 @@
 
     <groupId>com.example</groupId>
     <artifactId>hello</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.1.150</version>
     <packaging>jar</packaging>
 
     <name>Hello Spring Function on Azure</name>
@@ -19,8 +19,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>Java 8</maven.compiler.source>
+        <maven.compiler.target>Java 8</maven.compiler.target>
 
         <azure.functions.maven.plugin.version>1.22.0</azure.functions.maven.plugin.version>
         <azure.functions.java.library.version>3.0.0</azure.functions.java.library.version>
@@ -139,7 +139,7 @@
 
 		  <runtime>
 		    <os>linux</os>  
-		    <javaVersion>17</javaVersion>
+		    <javaVersion>Java 8</javaVersion>
 		    <webContainer>Java SE</webContainer>
 		  </runtime>
 
