@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.mycompany.app</groupId>
+  <groupId>com.example</groupId>
   <artifactId>my-app</artifactId>
   <packaging>jar</packaging>
-  <version>1.1.146</version>
+  <version>1.1.147</version>
   <name>my-app</name>
   <url>http://maven.apache.org</url>
   <dependencies>
@@ -17,6 +17,8 @@
   </dependencies>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.target>8</maven.compiler.target>
   </properties>
   <build>
     <pluginManagement>
@@ -39,7 +41,7 @@
             <manifest>
               <addClasspath>true</addClasspath>
               <classpathPrefix>lib/</classpathPrefix>
-              <mainClass>com.mycompany.app.App</mainClass>
+              <mainClass>com.example.App</mainClass>
             </manifest>
           </archive>
         </configuration>
