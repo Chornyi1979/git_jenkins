@@ -4,4 +4,4 @@ EXPOSE 8080
 COPY ./target/hello-*.jar /usr/app/
 WORKDIR /usr/app
 
-CMD java -jar my-app-*.jar
+CMD java -jar hello-*.jar
