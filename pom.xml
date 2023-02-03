@@ -214,7 +214,7 @@
 	        <runtime>
                   <os>linux</os>  
                   <javaVersion>Java 8</javaVersion>
-                  <webContainer>Java SE</webContainer>
+                  
 	        </runtime>
           
       	        <!-- Deployment settings -->
