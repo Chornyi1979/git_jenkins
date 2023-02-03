@@ -6,11 +6,11 @@ import com.microsoft.azure.functions.*;
 import com.microsoft.azure.functions.annotation.AuthorizationLevel;
 import com.microsoft.azure.functions.annotation.FunctionName;
 import com.microsoft.azure.functions.annotation.HttpTrigger;
-import org.springframework.cloud.function.adapter.azure.FunctionInvoker;
+import org.springframework.cloud.function.adapter.azure.AzureSpringBootRequestHandler;
 
 import java.util.Optional;
 
-public class HelloHandler extends FunctionInvoker<User, Greeting> {
+public class HelloHandler extends AzureSpringBootRequestHandler<User, Greeting> {
 
     @FunctionName("hello")
     public HttpResponseMessage execute(
@@ -20,7 +20,8 @@ public class HelloHandler extends FunctionInvoker<User, Greeting> {
                 .filter((u -> u.getName() != null))
                 .orElseGet(() -> new User(
                         request.getQueryParameters()
-                                .getOrDefault("name", "world")));
+                                .getOrDefault("name", "<no name supplied> please provide a name as " +
+                                        "either a query string parameter or in a POST body")));
         context.getLogger().info("Greeting user name: " + user.getName());
         return request
                 .createResponseBuilder(HttpStatus.OK)
