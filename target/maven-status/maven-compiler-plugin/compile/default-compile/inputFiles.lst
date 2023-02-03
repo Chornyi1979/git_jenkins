@@ -1,1 +1,4 @@
-/var/jenkins_home/workspace/my-pipeline/src/main/java/com/mycompany/app/App.java
+/var/jenkins_home/workspace/my-pipeline/src/main/java/com/example/model/User.java
+/var/jenkins_home/workspace/my-pipeline/src/main/java/com/example/model/Greeting.java
+/var/jenkins_home/workspace/my-pipeline/src/main/java/com/example/HelloHandler.java
+/var/jenkins_home/workspace/my-pipeline/src/main/java/com/example/HelloFunction.java
