@@ -32,7 +32,7 @@ def runTerraform() {
 def deployApp() {
 	echo 'deploying the application...'
 	sh "mvn package azure-webapp:deploy"
-	
+	sh "mvn spring-boot:run -Dspring-boot.run.profiles={profile_name}"
 	
 	
         
