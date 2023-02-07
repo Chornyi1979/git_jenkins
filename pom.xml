@@ -216,7 +216,12 @@
                   <javaVersion>Java 8</javaVersion>
                   <webContainer>Java SE</webContainer>
 	        </runtime>
-          
+                <appSettings>
+                  <property>
+                    <name>JAVA_OPTS</name>
+                    <value>-Dserver.port=80  -Djava.net.preferIPv4Stack=true</value>
+                  </property>
+                </appSettings>
       	        <!-- Deployment settings -->
                 <deployment>
                   <resources>
