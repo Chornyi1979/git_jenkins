@@ -1,5 +1,5 @@
 {
-  "scriptFile" : "../hello-app-1.1.21.jar",
+  "scriptFile" : "../hello-app-1.2.21.jar",
   "entryPoint" : "com.example.HelloHandler.execute",
   "bindings" : [ {
     "type" : "httpTrigger",
