@@ -6,7 +6,7 @@
     <groupId>com.example</groupId>
     <artifactId>hello</artifactId>
     <version>1.1.19</version>
-    <packaging>app.jar</packaging>
+    <packaging>jar</packaging>
 
     <name>Hello Spring Function on Azure</name>
 
@@ -224,7 +224,7 @@
                       <directory>${project.basedir}/target</directory>
 		
                       <includes>
-                        <include>*.app.jar</include>
+                        <include>*.jar</include>
                       </includes>
                     </resource>
                   </resources>
