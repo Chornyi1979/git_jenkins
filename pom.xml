@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>hello</artifactId>
+    <artifactId>hello-app</artifactId>
     <version>1.1.20</version>
     <packaging>jar</packaging>
 
