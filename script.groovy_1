@@ -11,7 +11,7 @@ def incrementVersion() {
 def buildJar() {
 	echo "building the application..."
 	sh 'mvn clean package'
-	sh 'mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=8081"'
+	
 }
 
 def buildImage() {
@@ -33,7 +33,7 @@ def runTerraform() {
 def deployApp() {
 	echo 'deploying the application...'
 	sh "mvn package azure-webapp:deploy"
-	
+	sh 'mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=8081"'
         
 }
 
