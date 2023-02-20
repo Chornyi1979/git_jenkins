@@ -11,7 +11,7 @@ def incrementVersion() {
 def buildJar() {
 	echo "building the application..."
 	sh 'mvn clean package'
-	sh 'mvnw spring-boot:run'
+	sh 'mvn spring-boot:run'
 }
 
 def buildImage() {
