@@ -11,7 +11,7 @@ terraform {
         container_name       = "tfstate"
         key                  = "prod.tfstate.terraform"
 
-        access_key           = "A27nITkJWj2kTIhdweo0gIxTEP/l5pFnpwOor9d/3KtApgJWpm0uM3XyAI3c0IJqWOYuHVncZEAG+AStb0pPXQ=="
+      
     }
 } 
 
@@ -20,10 +20,7 @@ terraform {
 provider "azurerm" {
   features {}
   
-  subscription_id   = "6c57c00d-ac27-409b-9fc2-dd266529f436"
-  tenant_id         = "7ab2df67-08b0-4840-940d-4cb97ddd5843"
-  client_id         = "803250fd-31a3-4d06-a481-263973ed3e77"
-  client_secret     = "r9a8Q~ZTnK-nqMpA68uZeDiLnuY9DVljeX3imbP."
+ 
 }
 
 resource "azurerm_resource_group" "rm" {
