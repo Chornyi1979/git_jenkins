@@ -12,11 +12,6 @@ pipeline {
                     label 'docker-agent'
                 }
             }
-            agent {
-                docker {
-                    label 'docker-agent'
-                }
-            }
             steps{
                 echo "Building..."
             }
