@@ -9,7 +9,7 @@ pipeline {
         stage ("build"){
             agent {
                 docker {
-                    label 'my-agent'
+                    label 'docker-agent'
                 }
             }
             agent {
