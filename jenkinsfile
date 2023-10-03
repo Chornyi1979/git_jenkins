@@ -9,7 +9,7 @@ pipeline {
         stage ("build") {
             agent {
                 docker {
-                    image 'chornyi1979/my-jenkins-agent:latest'
+                    label 'docker-agent' 
                 }
             }
             steps{
