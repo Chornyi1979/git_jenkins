@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Lint Dockerfiles') {
             steps {
-                sh 'docker run --rm -i hadolint/hadolint:1.22.1 < Dockerfile'
+                sh 'docker run --rm -i hadolint/hadolint:1.18.0 < Dockerfile'
             }
         }
     }
