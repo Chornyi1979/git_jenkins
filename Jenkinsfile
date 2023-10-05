@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
-                        docker.image('hadolint/hadolint:2.12.1').inside {
+                        docker.image('hadolint/hadolint:latest').inside {
                             sh 'hadolint Dockerfile'
                         }
                     }
