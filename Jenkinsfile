@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Lint Dockerfiles') {
             steps {
-                sh 'docker run --rm -i hadolint/hadolint:2.12.0 < /var/lib/jenkins/workspace/pipeline_lab_feature/Dockerfile'
+                sh 'docker run --rm -i hadolint/hadolint:2.12.0 < Dockerfile'
             }
         }
     }
