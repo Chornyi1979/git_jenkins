@@ -8,13 +8,7 @@ pipeline {
         }
         stage('Lint Dockerfiles') {
             steps {
-                script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
-                        docker.image('hadolint/hadolint:latest').inside {
-                            sh 'hadolint Dockerfile'
-                        }
-                    }
-                }
+                sh 'docker run --rm -i hadolint/hadolint:latest < Dockerfile'
             }
         }
     }
